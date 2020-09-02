@@ -1,5 +1,7 @@
+import flask
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from youtube_dl import YoutubeDL
+from flask_http2_push import http2push
 import time
 
 
@@ -83,9 +85,9 @@ def render_video(page_name):
     return render_template('video_player_youtube.html', videosource=video_source)
 
 @app.route('/graphs')
+@http2push('static/graphs_push_manifest.json')
 def render_graph():
     return render_template('graphs.html')
-
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
