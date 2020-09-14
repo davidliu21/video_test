@@ -1,5 +1,5 @@
 {
-	"static/test-10mb.jpg": {
+	"/static/test-5mb.jpg": {
 		"type": "image",
 		"weight": 1
 	}

@@ -1,0 +1,18 @@
+{
+	"/static/test-5mb2.jpg": {
+		"type": "image",
+		"weight": 1
+	},
+	"/static/test-5mb3.jpg": {
+		"type": "image",
+		"weight": 4
+	},
+	"/static/test-5mb4.jpg": {
+		"type": "image",
+		"weight": 16
+	},
+	"/static/test-5mb5.jpg": {
+		"type": "image",
+		"weight": 64
+	}
+}

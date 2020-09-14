@@ -89,6 +89,16 @@ def render_video(page_name):
 def render_graph():
     return render_template('graphs.html')
 
+@app.route('/graphs-weights')
+@http2push('static/graphs_weights_push_manifest.json')
+def render_graph_weights():
+    return render_template('graphs_weights.html')
+
+@app.route('/graphs-js')
+@http2push('static/graphs_js_push_manifest.json')
+def render_graph_js():
+	return render_template('graphs_js.html')
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(debug=True, port=5000)
